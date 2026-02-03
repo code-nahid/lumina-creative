@@ -1,0 +1,298 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+:root {
+	--primary-color: #fcf5e9;
+	--dark-color: #333;
+	--container-normal: 1100px;
+	--container-narrow: 900px;
+	--container-wide: 1400px;
+}
+
+/* Utility Classes */
+.bg-primary {
+	background-color: var(--primary-color);
+}
+
+.bg-dark {
+	background: var(--dark-color);
+	color: #fff;
+}
+
+.bg-primary {
+	padding: 0 0.4rem;
+	color: #333;
+}
+
+.section-heading {
+	font-size: 2rem;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.btn {
+	padding: 1rem 1.5rem;
+	border: 1px solid black;
+	color: #333;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	width: 100%;
+}
+
+/* Container */
+
+.container {
+	max-width: var(--container-normal);
+	margin: 0px auto;
+	padding: 0 1.5rem;
+}
+
+.container-sm {
+	max-width: var(--container-narrow);
+}
+
+.container-lg {
+	max-width: var(--container-wide);
+}
+
+/* Header Section */
+
+.header {
+	margin: 30px auto;
+}
+
+.header .logo {
+	width: 130px;
+}
+
+.header .header-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .main-menu {
+	display: flex;
+	gap: 1rem;
+}
+
+.header .main-menu a {
+	padding: 0.5rem 1rem;
+}
+
+.header .main-menu a:hover {
+	background-color: var(--primary-color);
+}
+
+.current {
+	background-color: var(--primary-color);
+	font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.hero h2 {
+	font-size: 3rem;
+	line-height: 1.4;
+	font-weight: normal;
+}
+
+/* Gallary Section */
+.gallary .gallary-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.gallary-item {
+	width: calc(33.333% - 20px);
+}
+
+.gallary .gallary-item img {
+	border-radius: 10px;
+}
+
+.gallary .gallary-item img:hover {
+	opacity: 0.9;
+}
+
+/* About */
+
+/* Service Section */
+
+.service {
+	padding: 3rem 0rem 4rem;
+}
+
+.service-flex {
+	display: flex;
+	gap: 40px;
+}
+
+.service-item h4 {
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+}
+
+.service-item p {
+	text-align: justify;
+}
+
+/* Team Section */
+.team {
+	padding: 3rem 0 4rem;
+}
+
+.team-flex {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.team-item img {
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+/* Contact */
+
+.contact {
+	padding: 3rem 0 4rem;
+}
+
+.contact p {
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--dark-color);
+	margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+	border: none;
+	border-bottom: 1px solid black;
+	font-family: inherit;
+	font-size: inherit;
+	color: var(--dark-color);
+	outline: none;
+	width: 100%;
+	margin-bottom: 2rem;
+	padding: 0 0 0.4rem;
+}
+
+.form-group textarea {
+	height: 100px;
+	resize: none;
+}
+
+.form .btn:hover {
+	background-color: black;
+	color: #fff;
+}
+
+/* Footer  */
+.footer {
+	border-top: 1px solid black;
+	padding: 2rem 1.5rem;
+}
+
+.footer .logo {
+	width: 130px;
+	height: 30px;
+}
+
+.footer .footer-flex {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.contact-us h4 {
+	margin-bottom: 4px;
+}
+
+.contact-list i {
+	margin-right: 6px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+	.header-flex {
+		flex-direction: column;
+		gap: 1.8rem;
+	}
+
+	.hero {
+		height: 300px;
+	}
+
+	.hero h2 {
+		font-size: 1.8rem;
+	}
+
+	.gallary-item {
+		width: calc(50% - 20px);
+	}
+
+	.service-flex {
+		flex-direction: column;
+	}
+
+	.team-flex {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.footer-flex {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.footer {
+		text-align: center;
+	}
+}
